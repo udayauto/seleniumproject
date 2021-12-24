@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Suite" parallel="false">
+
+  <test name="Checklist">
+  
+    <classes>
+      <class name="testngconcepts.AnnotationsExample"/>
+      
+    </classes>
+    
+    
+  </test> 
+  
+</suite> 

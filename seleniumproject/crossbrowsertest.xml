@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CrossBrowser" parallel="tests" thread-count="5">
+
+  <test name="Test1" >
+  
+  <parameter name="browser" value="chrome"></parameter>
+    <parameter name="userName" value="admin"></parameter>
+    <parameter name="password" value="admin123"></parameter>
+  
+  <classes> 
+  <class name = "testngsession.LoginTestCase_CrossBrowserTesting"> </class>
+   <class name = "testngsession.TestClass"> </class>
+  </classes>
+  </test> <!-- Test -->
+  
+  
+  <test name="Test2" >
+  
+  <parameter name="browser" value="edge"></parameter>
+    <parameter name="userName" value="admin"></parameter>
+    <parameter name="password" value="admin123"></parameter>
+  
+  <classes> 
+  <class name = "testngsession.LoginTestCase_CrossBrowserTesting"> </class>
+   <class name = "testngsession.TestClass"> </class>
+  </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->

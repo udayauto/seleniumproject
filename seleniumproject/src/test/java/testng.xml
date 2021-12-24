@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Project" parallel="false">
+  <test name="RegressionOrSmoke">
+  
+  <groups>
+  <run> 
+  <include name = "SmokeTest"> </include>
+  </run>
+  </groups>
+  
+  <classes>
+    <class name="com.testng.grouping.Grouping"/>
+      <class name="com.testng.grouping.SearchCase"/>
+    </classes>
+   
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

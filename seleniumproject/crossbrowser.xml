@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="methods" thread-count="5">
+	<test name="Test1">
+		<parameter name="userName" value="udaykiranqa">
+		</parameter>
+		<parameter name="pwd" value="Pranavi@2020">
+		</parameter>
+		
+		<parameter name="browser" value="chrome">
+		</parameter>
+		
+		<parameter name="keyword" value="Selenium">
+		</parameter>
+		<classes>
+			<class name="com.testng.parameterization.TestngParamExample" />
+			<class name="com.testng.parameterization.GoogleSearch" />
+
+		</classes>
+	</test> <!-- Test -->
+	
+	<test name="Test2">
+		<parameter name="userName" value="udaykiranqa">
+		</parameter>
+		<parameter name="pwd" value="Pranavi@2020">
+		</parameter>
+		<parameter name="browser" value="edge">
+		</parameter>
+		<parameter name="keyword" value="Selenium">
+		</parameter>
+		<classes>
+			<class name="com.testng.parameterization.TestngParamExample" />
+			<class name="com.testng.parameterization.GoogleSearch" />
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

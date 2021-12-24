@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite">
+	<test name="Test1" parallel="methods">
+		<parameter name="userName" value="udaykiranqa">
+		</parameter>
+		<parameter name="pwd" value="Pranavi@2020">
+		</parameter>
+		<parameter name="keyword" value="Selenium">
+		</parameter>
+		<parameter name="browser" value="chrome">
+		</parameter>
+		<classes>
+			<class name="com.testng.parameterization.TestngParamExample" />
+			<class name="com.testng.parameterization.GoogleSearch" />
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

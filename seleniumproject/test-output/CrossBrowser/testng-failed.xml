@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [CrossBrowser]" parallel="methods">
+  <test thread-count="5" name="Test2(failed)" parallel="methods">
+    <parameter name="password" value="admin123"/>
+    <parameter name="browser" value="edge"/>
+    <parameter name="userName" value="admin"/>
+    <classes>
+      <class name="testngsession.LoginTestCase_CrossBrowserTesting">
+        <methods>
+          <include name="verifyLoginTestCase" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testngsession.LoginTestCase_CrossBrowserTesting -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [CrossBrowser] -->
