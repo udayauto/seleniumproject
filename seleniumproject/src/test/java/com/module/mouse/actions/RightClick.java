@@ -1,7 +1,5 @@
 package com.module.mouse.actions;
-
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,16 +13,21 @@ public class RightClick {
 
 	public static void main(String[] args) {
 
+		//open browser
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
+		
+		//wait
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-		driver.manage().window().maximize();
-		// Test case
-		// Navigate
+		// step1: open application.
 		driver.get("http://demo.guru99.com/test/simple_context_menu.html");
+	
+		//Step2 - Locate an element called button.
+		
 		WebElement button = driver.findElement(By.xpath("//span[@class='context-menu-one btn btn-neutral']"));
 
+		//Actions class 
 		Actions action = new Actions(driver);
 		action.contextClick(button).perform();
 

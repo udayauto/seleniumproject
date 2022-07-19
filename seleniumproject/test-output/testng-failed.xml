@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testngsession.AmazonSearchTest">
+      <class name="excel.reader.AmazonSearchWithMultipleData">
         <methods>
-          <include name="verifyAmazonSearchTest"/>
+          <include name="verifyAmazonSearch"/>
         </methods>
-      </class> <!-- testngsession.AmazonSearchTest -->
+      </class> <!-- excel.reader.AmazonSearchWithMultipleData -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

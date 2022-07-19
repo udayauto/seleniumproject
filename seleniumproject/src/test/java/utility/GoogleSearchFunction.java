@@ -11,17 +11,12 @@ public class GoogleSearchFunction extends BaseClassTest{
 		
 		String browser = obj.readProperty("browser");
 		String url = obj.readProperty("url");
-		String expGoogleTitle = obj.readProperty("expectedGoogleTitle");
 
 		//open browser
 		startBrowser(browser);
 		driver.get(url);
 		
-		//verify title
-		String actualTitle = driver.getTitle();
-	 
-		//verifications
-		Assert.assertEquals(expGoogleTitle, actualTitle);
+		
 		
 		
 	}

@@ -22,14 +22,12 @@ public class DoubleClick {
 		//Wait
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-		// Test case
 		// Navigate
 		driver.get("http://demo.guru99.com/test/simple_context_menu.html");
 		
 		Actions action = new Actions(driver);
+		WebElement button = driver.findElement(By.xpath("//button[@ondblclick='myFunction()']"));		
 		
-		WebElement button = driver.findElement(By.xpath("//button[@ondblclick='myFunction()']"));
-
 		// double click 
 		action.doubleClick(button).perform();
 		

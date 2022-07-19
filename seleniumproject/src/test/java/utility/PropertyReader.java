@@ -5,7 +5,8 @@ public class PropertyReader {
 	
 	public static String readProperty(String key) throws Exception {
 		
-		String path = "C:\\workspace\\seleniumproject\\src\\test\\resources\\config.properties";
+		String path = "C:\\Users\\udayk\\Downloads\\seleniumproject\\seleniumproject\\src\\test\\resources\\config.properties";
+	
 		//open file in read mode.
 		FileInputStream fopen = new FileInputStream(path);
 	

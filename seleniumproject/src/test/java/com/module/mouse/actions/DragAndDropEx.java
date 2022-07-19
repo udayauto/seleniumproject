@@ -1,8 +1,8 @@
 package com.module.mouse.actions;
-
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,21 +13,19 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class DragAndDropEx {
 	public static void main(String[] args) {
 
+		//open browser
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-		driver.manage().window().maximize();
-		// Test case
-		// Navigate
-		driver.get("https://jqueryui.com/droppable/");
-
-		// mouseOver at Mens section
-		// moveToElement
 		
+		//wait
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);		
+		
+		// Open application.
+		driver.get("https://jqueryui.com/droppable/");
+		driver.manage().window().maximize();
 
 		// switch to iframe
-		driver.switchTo().frame(0);
+	    driver.switchTo().frame(0);
 
 		// DargAnd Drop
 		WebElement source = driver.findElement(By.id("draggable"));
@@ -36,8 +34,6 @@ public class DragAndDropEx {
 		//mouse event --actions
 		Actions action = new Actions(driver);
 		action.dragAndDrop(source, dest).perform();
-		
-		
 		
 		// drag and drop - One way
 		//action.dragAndDrop(source, target).perform();

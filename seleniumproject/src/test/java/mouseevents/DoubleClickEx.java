@@ -16,19 +16,22 @@ public class DoubleClickEx {
 		// open browser
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
+		
+		//wait
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		// open application ---
 		driver.get("https://demo.guru99.com/test/simple_context_menu.html");
 
 		// webelement
-
 		WebElement dclick = driver.findElement(By.xpath("//button[@ondblclick='myFunction()']"));
 
 		//Actions
-		
 		Actions action = new Actions(driver);
+		//double click 
 		action.doubleClick(dclick).perform();
+		
+		
 		
 	}
 

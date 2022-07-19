@@ -22,10 +22,8 @@ public class AnnotationsExample {
 	@Test // main method
 	public void testcase() {
 
-		System.out.println("Test Case Execution");
+		System.out.println(" @Test - Test Case Execution");
 
-		
-		
 	}
 
 	@AfterMethod

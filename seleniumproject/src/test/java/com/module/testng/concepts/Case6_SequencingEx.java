@@ -1,4 +1,5 @@
 package com.module.testng.concepts;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 public class Case6_SequencingEx {
 
@@ -14,34 +15,43 @@ public class Case6_SequencingEx {
 	// Set Priority to execute in your own way.
 
 
-	@Test(priority = 0)
-	public void Hyderabad() {
+	@Test(priority=0)
+	public void Login() {
 
-		System.out.println("Test case 1");
-	//	Assert.fail("Hyderabd fail");
+		System.out.println("Test case 1: Login");
+		
+	//	Assert.fail("Hyderabd fail"); // force failure
 	}
 
-	@Test(priority = 1, dependsOnMethods="Hyderabad")
-	public void Pune() {
+	@Test(priority=1, dependsOnMethods="Login")
+	public void editProfile() {
 
-		System.out.println("Test case 2");
-	}
-
-	@Test(priority = 2)
-	public void Chennai() {
-
-		System.out.println("Test case 3");
-	}
-
-	@Test(priority = 3)
-	public void Delhi() {
-
-		System.out.println("Test case 4");
+		System.out.println("Test case 2: editProfile");
 	}
 
 	@Test(enabled=false)
-	public void Banglore() {
+	public void SubmitOrder() {
 
-		System.out.println("Test case 5");
+		System.out.println("Test case 3: SubmitOrder");
 	}
+	
+	
+	/*
+	 * @Test(priority=2) public void Chennai() {
+	 * 
+	 * System.out.println("Test case 3: Chennai"); }
+	 * 
+	 * @Test(priority=3) public void Delhi() {
+	 * 
+	 * System.out.println("Test case 4: Delhi"); }
+	 * 
+	 * @Test(priority=4) public void Banglore() {
+	 * 
+	 * System.out.println("Test case 5 : Banglore"); }
+	 * 
+	 * @Test(priority=5) public void Alaska() {
+	 * 
+	 * System.out.println("Test case 6 : Alaska"); }
+	 */
+	
 }

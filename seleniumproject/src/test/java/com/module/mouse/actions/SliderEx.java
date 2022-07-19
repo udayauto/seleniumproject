@@ -18,26 +18,26 @@ public class SliderEx {
 		//open browser 
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
+		
+		//wait
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
 		driver.manage().window().maximize();
 	
-		// Test case
-		// Navigate
+		// open browser
 		driver.get("https://demoqa.com/slider");
-
-		Actions action = new Actions(driver);
-		// WebElement button =
-		// driver.findElement(By.xpath("//button[text()='Double-Click Me To See
-		// Alert']"));
-
+		
+		//locate the slider.
 		WebElement slider = driver.findElement(By.xpath("//input[@type='range']"));
 
-		// Slider
-		//	action.dragAndDropBy(slider, 100, 200).perform();
+		//Actions 
+		Actions action = new Actions(driver);
+		action.dragAndDropBy(slider, 150, 150).perform();
 		
-		//another way
-		action.moveToElement(slider).dragAndDropBy(slider, 150, 150).perform();
+		
 
+		
+		// WebElement button =
+				// driver.findElement(By.xpath("//button[text()='Double-Click Me To See
+				// Alert']"));
 	}
 }

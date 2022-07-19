@@ -8,7 +8,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Amazon {
 	
-	@Test(groups="checklist")
+	@Test(groups="Checklist")
 	public void launchApplication() {
 	WebDriverManager.chromedriver().setup();
 	WebDriver driver = new ChromeDriver();

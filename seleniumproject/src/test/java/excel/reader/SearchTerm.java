@@ -18,7 +18,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class SearchTerm {
 
 	@Test
-	public void search() throws IOException, InterruptedException {
+	public void search() throws Exception {
+		
 		// open browser
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
